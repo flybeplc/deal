@@ -327,19 +327,31 @@ cite {
 .tl__read-more {
   float: right;
   padding: .8em 1em;
-  background: #acb7c0;
+  border: solid 1px #59358c;
+  background: #59358c;
   color: white;
-  border-radius: 0.25em;
+  border-radius: 0.5em;
+  margin: .5em;
 }
 
 .tl__read-more:hover {
-  background-color: #bac4cb;
+  background-color: #fff;
+  color: #59358c;
 }
 
 .tl__date {
   float: left;
   padding: .8em 0;
   font-weight: 800;
+}
+
+table,
+table tr {
+  border: solid 1px #ccc;
+}
+
+table td {
+  padding: .5em;
 }
 
 @media only screen and (min-width: 768px) {
