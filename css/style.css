@@ -305,7 +305,8 @@ cite {
 }
 
 .tl__content h2 {
-  color: #303e49;
+  color: #59358c;
+  text-transform: capitalize;
 }
 
 .tl__content p,
