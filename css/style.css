@@ -65,21 +65,34 @@ Vertical Timeline - by CodyHouse.co
 
 -------------------------------- */
 header {
-  height: 200px;
-  line-height: 200px;
+  min-height: 200px;
   text-align: center;
   background: #59358c;
 }
 
 header h1 {
-  color: white;
+  padding: 2rem 0rem;
+  color: #fff;
   font-size: 1.8rem;
+}
+
+header div {
+  color: #ccc;
+}
+
+header div a,
+header div a:visited {
+  color: #ccc;
+  font-weight: 800;
+}
+
+header div a:hover {
+  text-decoration: underline;
 }
 
 @media only screen and (min-width: 1170px) {
   header {
-    height: 200px;
-    line-height: 200px;
+    min-height: 200px;
   }
 
   header h1 {
