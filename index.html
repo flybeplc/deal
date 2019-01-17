@@ -5,9 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
     <link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
-    <link rel="stylesheet" href="css/demo.css"> <!-- Demo style -->
 
     <title>The Landing of flybe</title>
 </head>
@@ -37,7 +35,7 @@
                     <h2>Jersey European Airways, the precursor to Flybe</h2>
                     <p>Launched in 1979 Jersey European Airways was sold in 1983 to the Walker Steel Group owned by
                         Jack Walker</p>
-                    <img src="img/G-JEAA.jpg" />
+                    <img src="img/G-JEAA.jpg" data-activate="G-JEAA" />
                     <span class="tl__date">1979 - 1983</span>
                 </div>
             </div>
@@ -51,7 +49,7 @@
                     <h2>Cancer strikes</h2>
                     <p>In 2000 Jack Walker dies from cancer. Jersey European Airways goes on to become British European
                         and then in 2002 becomes Flybe.</p>
-                    <img src="img/JackWalkerEwood.jpg" />
+                    <img src="img/JackWalkerEwood.jpg" data-activate="JackWalkerEwood" />
                     <span class="tl__date">2000 Aug 17</span>
                 </div>
             </div>
@@ -84,7 +82,7 @@
                     <h2>Share price before 2018</h2>
                     <p>While there was a gradual decline in share price there was no existential threat to cause alarm
                         for investors such as The Wellcome Trust.</p>
-                    <img src="img/FLYBE-Since2010.png">
+                    <img src="img/FLYBE-Since2010.png" data-activate="FLYBE-Since2010">
                     <span class="tl__date">Pre 2018</span>
                 </div>
             </div>
@@ -99,7 +97,7 @@
                     <p>After an uneventful few years a sudden blip appears.
                         Clearly some were trading on insider knowledge given no announcement had been made.
                     </p>
-                    <img src="img/FLYB-2018-02-22.png">
+                    <img src="img/FLYB-2018-02-22.png" data-activate="FLYB-2018-02-22">
                     <span class="tl__date">2018 Feb 22</span>
                 </div>
             </div>
@@ -192,9 +190,9 @@
                 </div>
 
                 <div class="tl__content js-cd-content">
-                    <h2>CEO tweets about interview with CNN</h2>
+                    <h2>CEO retweets about interview with CNN</h2>
                     <p>CNN interview is not aired until almost 2 months later on Nov 15.</p>
-                    <img src="img/2018-09-21-tweet-interview.jpg" />
+                    <img src="img/2018-09-21-tweet-interview.jpg" data-activate="2018-09-21-tweet-interview" />
                     <a href="https://twitter.com/MajaGedosev/status/1043079903648907264" class="tl__read-more" target="_blank">Read
                         more</a>
                     <span class="tl__date">2018 Sep 21</span>
@@ -251,13 +249,26 @@
 
                 <div class="tl__content js-cd-content">
                     <h2>Fuel and USD hedged</h2>
-                    <p>From the half year results to be published in Nov 14 we know the situation
+                    <p>Mitigating the risks identified in the H1 2018/19 Trading update at this point we know from the
+                        half year results to be published in Nov 14 that the company has paid for:
                         <ul>
                             <li>90.0% of its anticipated fuel requirements for the next 12 months</li>
                             <li>52.6% of its anticipated USD requirements for the next 12 months</li>
                         </ul>
                     </p>
-                    <p>Thats is £50m worth of fuel</p>
+                    <p>Thats is £50m worth of fuel bought just after the most recent peak. To put prices into
+                        perspective here is 5 years of fuel prices.</p>
+                    <p>
+                        <img src="img/jetfuelPriceUSD.png" data-activate="jetfuelPriceUSD" />
+                    </p>
+                    <p>
+                        As fuel is purchased in USD we must also consider the currency rate
+                    </p>
+                    <p>
+                        <img src="img/GBPUSD.png" data-activate="GBPUSD" />
+                    </p>
+                    <!-- <a href="https://www.indexmundi.com/commodities/?commodity=jet-fuel&months=60" class="tl__read-more"
+                        target="_blank">See larger graph</a> -->
                     <span class="tl__date">2018 Nov 12</span>
                 </div>
             </div>
@@ -312,8 +323,8 @@
                             "formal sale process"
                         </blockquote><cite>The Board of Flybe Group plc</cite>
                     </p>
-                    <p>They appoint Evercore as its financial adviser. Begs the question is the CFO not qualified for
-                        their role?</p>
+                    <p>They appoint Evercore as a financial adviser. Begs the question is the CFO not sufficently
+                        qualified or experienced?</p>
                     <a href="rns/1207272.pdf" class="tl__read-more" target="_blank">Read more</a>
                     <span class="tl__date">2018 Nov 14 - 7:03</span>
                 </div>
@@ -327,7 +338,7 @@
 
                 <div class="tl__content js-cd-content">
                     <h2>CNN Interview released</h2>
-                    <p>The video recorded back on Sep 21. While positive verbal message some may see negative body
+                    <p>The video recorded back on Sep 21. While a positive verbal message some may see negative body
                         language cues.</p>
                     <video height="240" src="http://pmd.cdn.turner.com/cnn/big/travel/2018/11/15/caption/business-traveller-travel-talk-1.cnn_ios_5500.mp4"
                         controls></video>
@@ -355,7 +366,7 @@
                         </blockquote><cite>Andy Donald (Maitland/AMO)</cite>
                     </p>
                     <p>
-                        <img src="img/hq.jpg" alt="Image by @planetrainspotters from piktag.net" />
+                        <img src="img/hq.jpg" data-activate="hq" alt="Image by @planetrainspotters from piktag.net" />
                         The hanger was opened on 4 May 2006 at a cost of £12m
                         <a href="https://www.exeter-airport.co.uk/new-flybe-hangar-opened/" target="_blank">https://www.exeter-airport.co.uk/new-flybe-hangar-opened/</a>
                     </p>
@@ -389,7 +400,7 @@
                         </blockquote><cite>Andy Donald (Maitland/AMO)</cite>
                     </p>
                     <p>This plane to be exact</p>
-                    <img src="img/G-JEDW_(14072953419).jpg" alt="Image from Wikimedia Commons">
+                    <img src="img/G-JEDW_(14072953419).jpg" data-activate="G-JEDW" alt="Image from Wikimedia Commons">
 
                     <a href="rns/1209014.pdf" class="tl__read-more" target="_blank">Read more</a>
                     <span class="tl__date">2018 Nov 21 - 14:53</span>
@@ -538,7 +549,7 @@
                         and Stobart Avaiation Limited.
                     </p>
                     <p>
-                        <img src="img/wrightbidco.png" />
+                        <img src="img/wrightbidco.png" data-activate="wrightbidco" />
                     </p>
                     <p>At this time the owners of Flybe are unaware of the existence of this company.</p>
                     <a href="rns/wrightbidIncorp.pdf" class="tl__read-more" target="_blank">Read more</a>
@@ -574,7 +585,7 @@
                     <h2>Business as usual</h2>
                     <p>Team raises money for Cancer Research UK</p>
                     <p>
-                        <img src="img/2018-12-20-tweet-cruk.jpg" />
+                        <img src="img/2018-12-20-tweet-cruk.jpg" data-activate="2018-12-20-tweet-cruk" />
                     </p>
                     <a href="https://twitter.com/flybe/status/1075795819125706755" class="tl__read-more" target="_blank">Read
                         more</a>
@@ -591,7 +602,7 @@
                     <h2>Wright Bidco Limited changes name to Connect Airways Limited</h2>
                     <p>Content</p>
                     <p>
-                        <img src="img/WrightBidcoNameChange.png" />
+                        <img src="img/WrightBidcoNameChange.png" data-activate="WrightBidcoNameChange" />
                     </p>
                     <a href="rns/wrightbidName.pdf" class="tl__read-more" target="_blank">Read more</a>
                     <span class="tl__date">2019 Jan 10</span>
@@ -696,13 +707,30 @@
                     <h2>Slot Transaction at Gatwick Airport</h2>
                     <p>Minutes before market close the board announces they have sold the company's Gatwick slots for
                         £4.5m to Vueling Airlines</p>
-                    <img src="img/gatwick.jpg" />
+                    <img src="img/gatwick.jpg" data-activate="gatwick" />
                     <a href="rns/1223852.pdf" class="tl__read-more" target="_blank">Read more</a>
                     <span class="tl__date">2019 Jan 11 - 16:25</span>
                 </div>
             </div>
 
     </section>
+
+    <div class="lightbox-target">
+        <img src="img/G-JEAA.jpg" id="G-JEAA" />
+        <img src="img/JackWalkerEwood.jpg" id="JackWalkerEwood" />
+        <img src="img/FLYBE-Since2010.png" id="FLYBE-Since2010" />
+        <img src="img/FLYB-2018-02-22.png" id="FLYB-2018-02-22" />
+        <img src="img/2018-09-21-tweet-interview.jpg" id="2018-09-21-tweet-interview" />
+        <img src="img/jetfuelPriceUSD.png" id="jetfuelPriceUSD" />
+        <img src="img/GBPUSD.png" id="GBPUSD" />
+        <img src="img/hq.jpg" id="hq" alt="Image by @planetrainspotters from piktag.net" />
+        <img src="img/G-JEDW_(14072953419).jpg" id="G-JEDW" alt="Image from Wikimedia Commons">
+        <img src="img/wrightbidco.png" id="wrightbidco" />
+        <img src="img/2018-12-20-tweet-cruk.jpg" id="2018-12-20-tweet-cruk" />
+        <img src="img/WrightBidcoNameChange.png" id="WrightBidcoNameChange" />
+        <img src="img/gatwick.jpg" id="gatwick" />
+        <span class="lightbox-close"></span>
+    </div>
 
     <script src="js/main.js"></script>
 </body>
