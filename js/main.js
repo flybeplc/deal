@@ -94,3 +94,7 @@
 		document.querySelector(".lightbox-target").classList.remove("active");
 	}
 })();
+
+function getLastNum() {
+	return [].slice.call(document.querySelectorAll('[data-ln]')).map(e => +e.dataset['ln']).sort((a, b) => a - b).reverse()[0]
+}
