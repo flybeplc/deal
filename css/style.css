@@ -85,25 +85,28 @@ Vertical Timeline - by CodyHouse.co
 
 -------------------------------- */
 header {
-  min-height: 200px;
+  min-height: 300px;
   text-align: center;
   background: #59358c;
+  padding: 1rem;
 }
 
 header h1 {
-  padding: 2rem 0rem;
+  padding: 1rem 0rem;
   color: #fff;
-  font-size: 1.8rem;
+  font-size: 2rem;
+  letter-spacing: .1rem;
+  text-transform: capitalize;
+}
+
+header h2,
+header h2 a {
+  color: #fff;
 }
 
 header div {
-  color: #ccc;
-}
-
-header div a,
-header div a:visited {
-  color: #ccc;
-  font-weight: 800;
+  color: #fff;
+  font-size: 1.4rem;
 }
 
 header div a:hover {
@@ -681,4 +684,72 @@ img[data-activate] {
 .lightbox-target.active span.lightbox-close {
   top: 0px;
   cursor: pointer;
+}
+
+
+.bmc-button img {
+  text-align: center;
+  width: 10rem;
+}
+
+.bmc-button {
+  text-align: center;
+  text-decoration: none !important;
+  display: inline-block;
+  color: #ffffff;
+  background-color: #59358c;
+  border: 1px solid transparent !important;
+  padding: 1rem 9px !important;
+  font-size: 2rem;
+  margin: 0 auto !important;
+  -webkit-box-sizing: border-box !important;
+  box-sizing: border-box !important;
+  -o-transition: 0.3s all linear !important;
+  -webkit-transition: 0.3s all linear !important;
+  -moz-transition: 0.3s all linear !important;
+  -ms-transition: 0.3s all linear !important;
+  transition: 0.3s all linear !important;
+}
+
+.bmc-button:hover,
+.bmc-button:active,
+.bmc-button:focus {
+  text-decoration: none !important;
+  background-color: #fff;
+  color: #59358c
+}
+
+#coffee {
+  text-align: center;
+  z-index: 800;
+  position: relative;
+  margin: 5rem 0rem;
+}
+
+#about {
+  text-align: center;
+  text-align: center;
+  z-index: 800;
+  position: relative;
+  margin: 10rem 0rem;
+}
+
+#about div {
+  display: inline-block;
+  color: #59358c;
+  background-color: #fff;
+  border: 1px solid transparent !important;
+  padding: 1rem 9px !important;
+  font-size: 2rem;
+  max-width: 40em;
+  margin: 0 auto !important;
+}
+
+#about p {
+  text-align: left;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
 }
