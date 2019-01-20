@@ -37,13 +37,19 @@ body {
   margin: 0;
 }
 
-h2[data-ln]:before {
-  content: "A"attr(data-ln);
+.tl__content h3 {
   position: absolute;
-  top: .5em;
-  right: .5em;
-  color: #999;
+  top: 0;
+  right: 0;
+  padding: 0;
+  margin: 1em;
+  color: #000;
+  font-size: 1em;
+}
+
+h3 .version {
   font-size: .8em;
+  color: #999;
 }
 
 a {
@@ -298,7 +304,8 @@ blockquote:after {
 }
 
 cite {
-  line-height: 3;
+  display: block;
+  padding: 0 1rem 2rem 1rem;
   text-align: left;
 }
 
@@ -353,7 +360,6 @@ cite {
 }
 
 .tl__read-more {
-  float: right;
   padding: .8em 1em;
   border: solid 1px #59358c;
   background: #59358c;
@@ -371,6 +377,11 @@ cite {
   float: left;
   padding: .8em 0;
   font-weight: 800;
+  position: absolute;
+  width: 100%;
+  left: 1rem;
+  top: -1rem;
+  font-size: 1.4rem;
 }
 
 table,
@@ -391,10 +402,19 @@ table td {
     font-size: 1.6rem;
   }
 
+
   .tl__read-more,
   .tl__date {
     font-size: 1.4rem;
   }
+
+  .tl__date {
+    position: absolute;
+    width: 100%;
+    left: 1rem;
+    top: -1rem;
+  }
+
 }
 
 @media only screen and (min-width: 1170px) {
@@ -414,9 +434,6 @@ table td {
     border-left-color: white;
   }
 
-  .tl__read-more {
-    float: left;
-  }
 
   .tl__date {
     position: absolute;
@@ -438,9 +455,6 @@ table td {
     border-right-color: white;
   }
 
-  .tl__block:nth-child(even) .tl__read-more {
-    float: right;
-  }
 
   .tl__block:nth-child(even) .tl__date {
     left: auto;
