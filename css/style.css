@@ -276,9 +276,8 @@ header div a:hover {
 }
 
 blockquote {
-  line-height: 2em;
-  color: #59358c99;
-
+  line-height: 1.6em;
+  color: #59358c;
   font-style: italic;
 }
 
@@ -308,8 +307,9 @@ blockquote:after {
 
 cite {
   display: block;
-  padding: 0 1rem 2rem 1rem;
+  padding: 0em 3rem 2rem 3rem;
   text-align: left;
+  font-size: .8em;
 }
 
 .tl__content {
