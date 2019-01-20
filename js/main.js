@@ -90,6 +90,10 @@
 
 	}
 
+	document.getElementById('LatestPage').addEventListener('click', function () {
+		Location.relod(true)
+	});
+
 	function close() {
 		document.querySelector(".lightbox-target").classList.remove("active");
 	}
