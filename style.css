@@ -12,13 +12,13 @@ Primary style
 
 @font-face {
   font-family: 'Open Sans';
-  src: url('../fonts/OpenSans-Regular.ttf') format('truetype');
+  src: url('fonts/OpenSans-Regular.ttf') format('truetype');
   font-weight: 400;
 }
 
 @font-face {
   font-family: 'Open Sans';
-  src: url('../fonts/OpenSans-Bold.ttf') format('truetype');
+  src: url('fonts/OpenSans-Bold.ttf') format('truetype');
   font-weight: 800;
 }
 
@@ -226,15 +226,15 @@ header div a:hover {
 }
 
 .tl__block.announcement .tl__img div {
-  background: url('/img/announcement.svg');
+  background: url('img/announcement.svg');
 }
 
 .tl__block.background .tl__img div {
-  background: url('/img/background.svg');
+  background: url('img/background.svg');
 }
 
 .tl__block.market .tl__img div {
-  background: url('/img/market.svg');
+  background: url('img/market.svg');
 }
 
 .filter input[type="checkbox"] {
