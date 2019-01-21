@@ -104,6 +104,10 @@ header a {
   color: #fff;
 }
 
+.imgHolder {
+  text-align: center;
+}
+
 header div {
   color: #fff;
   font-size: 1.4rem;
