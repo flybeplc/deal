@@ -100,5 +100,5 @@
 })();
 
 function getLastNum() {
-	return [].slice.call(document.querySelectorAll('[data-ln]')).map(e => +e.dataset['ln']).sort((a, b) => a - b).reverse()[0]
+	return [].slice.call(document.querySelectorAll('h3[id]')).map(e => +e.id.substr(1)).sort((a, b) => a - b).reverse()[0]
 }
