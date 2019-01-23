@@ -108,6 +108,22 @@ header div a:hover {
   text-decoration: underline;
 }
 
+.tl__block:target .tl__img {
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    background: #59358cff;
+  }
+
+  50% {
+    background: #e9f0f5ee;
+  }
+}
+
 @media only screen and (min-width: 1170px) {
   header {
     min-height: 200px;
@@ -406,6 +422,8 @@ cite {
   border: 7px solid transparent;
   border-right: 7px solid white;
 }
+
+
 
 .tl__content h2 {
   color: #59358c;
