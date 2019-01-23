@@ -139,7 +139,7 @@ header div a:hover {
   left: 18px;
   height: 100%;
   width: 4px;
-  background: #d7e4ed;
+  background: rgba(89, 53, 140, 0.5);
 }
 
 @media only screen and (min-width: 1170px) {
@@ -277,7 +277,7 @@ header div a:hover {
   line-height: 1em;
   background: #fff;
   color: #59358c;
-
+  min-width: 2em;
 }
 
 .filter label:hover {
@@ -302,7 +302,7 @@ header div a:hover {
 
 .tl__content {
   background: white;
-  border-radius: 0.25em;
+  border-radius: 1em;
   padding: 1em;
   -webkit-box-shadow: 0 3px 0 #d7e4ed;
   box-shadow: 0 3px 0 #d7e4ed;
@@ -399,7 +399,7 @@ cite {
   /* triangle next to content block */
   content: '';
   position: absolute;
-  top: 16px;
+  top: 1em;
   right: 100%;
   height: 0;
   width: 0;
@@ -497,7 +497,7 @@ table td {
   }
 
   .tl__content::before {
-    top: 24px;
+    top: 2em;
     left: 100%;
     border-color: transparent;
     border-left-color: white;
@@ -517,7 +517,7 @@ table td {
   }
 
   .tl__block:nth-child(even) .tl__content::before {
-    top: 24px;
+    top: 2em;
     left: auto;
     right: 100%;
     border-color: transparent;
@@ -729,5 +729,8 @@ img[data-activate] {
 
 footer {
   text-align: center;
-  padding: 2rem;
+  padding: 1rem 3rem 3rem 3rem;
+  background: #59358c;
+  color: #fff;
+  position: relative;
 }
