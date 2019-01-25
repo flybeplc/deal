@@ -1,5 +1,9 @@
 (function () {
 
+	var fa = document.getElementById('toggle-announcement'),
+		fb = document.getElementById('toggle-background'),
+		fm = document.getElementById('toggle-market'),
+		fr = document.getElementById('toggle-read');
 
 	document.querySelectorAll("img[data-activate]").forEach(e => {
 		e.addEventListener('click', function () {
@@ -107,7 +111,10 @@
 				delete articleNode.dataset['read'];
 			} else {
 				articleNode.dataset['read'] = true;
-				articleNode.dataset['filter'] = true;
+
+				if (!fr.checked) {
+					articleNode.dataset['filter'] = true;
+				}
 			}
 
 			updateReadCount(currentArticles, itemsRead);
@@ -164,10 +171,7 @@
 		});
 	}
 
-	var fa = document.getElementById('toggle-announcement'),
-		fb = document.getElementById('toggle-background'),
-		fm = document.getElementById('toggle-market'),
-		fr = document.getElementById('toggle-read');
+
 
 
 	document.getElementById('count-announcement').innerText = currentArticles.reduce(function (a, e) {
@@ -288,5 +292,5 @@
 })();
 
 function getLastNum() {
-	return [].slice.call(document.querySelectorAll('h3[id]')).map(e => +e.id.substr(1)).sort((a, b) => a - b).reverse()[0]
+	return [].slice.call(document.querySelectorAll('.tl__block[id]')).map(e => +e.id.substr(1)).sort((a, b) => a - b).reverse()[0]
 }
