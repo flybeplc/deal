@@ -43,7 +43,7 @@
 		e.addEventListener('click', function (e) {
 			var n = e.target.parentNode.parentNode.parentNode;
 			url = document.getElementById('copy-url');
-			url.innerHTML = window.location.host + window.location.pathname + "#" + n.id;
+			url.innerHTML = "https://" + window.location.host + window.location.pathname + "#" + n.id;
 			url.focus();
 			url.select();
 			document.execCommand("copy");
