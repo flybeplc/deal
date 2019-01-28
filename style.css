@@ -850,3 +850,23 @@ footer {
   color: #fff;
   position: relative;
 }
+
+footer ul {
+  list-style: none;
+}
+
+footer li {
+  padding: .5em;
+}
+
+footer a,
+footer a:visited {
+  color: #fff;
+
+}
+
+footer a:focus,
+footer a:hover {
+  background: #fff;
+  color: #59358c;
+}
