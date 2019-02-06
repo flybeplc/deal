@@ -15,8 +15,10 @@
 	document.querySelector(".lightbox-target").addEventListener('click', close)
 
 	function activate(src) {
-		document.querySelector('.lightbox-target img').setAttribute('src', src);
+		var lboxImg = document.querySelector('.lightbox-target img');
+		lboxImg.setAttribute('src', lboxImg.dataset['loading']);
 		document.querySelector('.lightbox-target').classList.add('active');
+		lboxImg.setAttribute('src', src);
 	}
 
 	document.querySelectorAll('.tl__img').forEach(e => {
