@@ -310,7 +310,8 @@
 	updateFilter('background', !fb.checked, fr.checked);
 	updateFilter('market', !fm.checked, fr.checked);
 	updateReadCount(getUnfilteredCategoryArticles(), readItems);
-	document.addEventListener('load', lazyLoad);
+
+	window.setTimeout(lazyLoad, 250);
 
 })();
 
