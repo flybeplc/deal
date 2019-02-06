@@ -761,19 +761,14 @@ span.lightbox-close:after {
 }
 
 .lightbox-target.active img {
-  display: none;
   max-height: 100%;
   max-width: 100%;
+  background-color: #000;
 }
 
 img[data-activate] {
   cursor: pointer;
 }
-
-.lightbox-target.active img.vis {
-  display: block;
-}
-
 
 .lightbox-target.active span.lightbox-close {
   top: 0px;

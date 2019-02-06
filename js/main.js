@@ -14,16 +14,9 @@
 	document.querySelector(".lightbox-close").addEventListener('click', close)
 	document.querySelector(".lightbox-target").addEventListener('click', close)
 
-	function activate(id) {
-		document.querySelector(".lightbox-target").classList.add("active");
-
-		document.querySelectorAll(".lightbox-target img").forEach(e => {
-			if (e.id === id) {
-				e.classList.add('vis');
-			} else {
-				e.classList.remove('vis');
-			}
-		});
+	function activate(src) {
+		document.querySelector('.lightbox-target img').setAttribute('src', src);
+		document.querySelector('.lightbox-target').classList.add('active');
 	}
 
 	document.querySelectorAll('.tl__img').forEach(e => {
@@ -38,6 +31,33 @@
 			}
 		});
 	});
+
+	var lazyImg = document.querySelectorAll('.imgHolder img[data-activate]')
+
+
+	document.addEventListener('scroll', lazyLoad);
+	document.addEventListener('resize', lazyLoad);
+
+	function lazyLoad() {
+		for (var i = 0; i < lazyImg.length; i++) {
+			if (isInViewport(lazyImg[i])) {
+				if (lazyImg[i].dataset['activate'] && lazyImg[i].dataset['activate'] != lazyImg[i].src) {
+					lazyImg[i].src = lazyImg[i].dataset['activate'];
+				}
+			}
+		}
+	}
+
+	function isInViewport(el) {
+		var rect = el.getBoundingClientRect();
+
+		return (
+			rect.bottom >= 0 &&
+			rect.right >= 0 &&
+			rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+			rect.left <= (window.innerWidth || document.documentElement.clientWidth)
+		);
+	}
 
 	document.querySelectorAll('.tl__block .link').forEach(e => {
 		e.addEventListener('click', function (e) {
@@ -288,6 +308,7 @@
 	updateFilter('background', !fb.checked, fr.checked);
 	updateFilter('market', !fm.checked, fr.checked);
 	updateReadCount(getUnfilteredCategoryArticles(), readItems);
+	document.addEventListener('load', lazyLoad);
 
 })();
 
