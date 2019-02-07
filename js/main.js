@@ -27,6 +27,7 @@
 			if (n) {
 				if (n.dataset['filter']) {
 					delete n.dataset['filter'];
+					lazyLoad();
 				} else {
 					n.dataset['filter'] = true;
 				}
@@ -34,7 +35,17 @@
 		});
 	});
 
-	var lazyImg = document.querySelectorAll('.imgHolder img[data-activate]')
+	var lazyImg = [].slice.call(document.querySelectorAll('.imgHolder img[data-activate]')).map(function (e) {
+		var aEl = e.parentNode;
+		while (aEl && !aEl.classList.contains('tl__block')) {
+			aEl = aEl.parentNode;
+		}
+
+		return {
+			imgEl: e,
+			artEl: aEl
+		};
+	});
 
 
 	document.addEventListener('scroll', lazyLoad);
@@ -42,9 +53,11 @@
 
 	function lazyLoad() {
 		for (var i = 0; i < lazyImg.length; i++) {
-			if (isInViewport(lazyImg[i])) {
-				if (lazyImg[i].dataset['activate'] && lazyImg[i].dataset['activate'] != lazyImg[i].src) {
-					lazyImg[i].src = lazyImg[i].dataset['activate'];
+			if (isInViewport(lazyImg[i].imgEl)) {
+				if (lazyImg[i].imgEl.dataset['activate'] && lazyImg[i].imgEl.dataset['activate'] != lazyImg[i].imgEl.src) {
+					if ((lazyImg[i].artEl && !lazyImg[i].artEl.dataset['filter']) || !lazyImg[i].artEl) {
+						lazyImg[i].imgEl.src = lazyImg[i].imgEl.dataset['activate'];
+					}
 				}
 			}
 		}
